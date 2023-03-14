@@ -21,9 +21,17 @@ function App() {
           zh, en
         }
       },
+      assetManager: {
+        uploadFile: (ev) => {
+          const files = ev.dataTransfer ? ev.dataTransfer.files : ev.target.files;
+          // ...send somewhere
+          // 文件上传
+          console.log(files)
+        }
+      },
       fromElement: true,
       container: '#gjs',
-      plugins: [plugin,],
+      plugins: [plugin],
       pluginsOpts: {
         [plugin]: {
           i18n: {
@@ -39,6 +47,27 @@ function App() {
       editor.setComponents(
         localStorage.getItem('gjs-email-editor') || '<mjml><mj-body><mj-section><mj-column><mj-text>Content 1</mj-text></mj-column></mj-section></mj-body></mjml>',
       );
+
+
+      // The upload is started
+      editor.on('asset:upload:start', () => {
+        console.log('asset:upload:start')
+      });
+
+      // The upload is ended (completed or not)
+      editor.on('asset:upload:end', () => {
+        console.log('asset:upload:end');
+      })
+
+      // Error handling
+      editor.on('asset:upload:error', (err) => {
+        console.log('asset:upload:error', err)
+      });
+
+      // Do something on response
+      editor.on('asset:upload:response', (response) => {
+        console.log('asset:upload:response', response)
+      });
     })
   }, [])
   return <div>
