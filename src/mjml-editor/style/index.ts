@@ -10,7 +10,7 @@ export default (editor: grapesjs.Editor, opt: RequiredPluginOptions) => {
       sectors.add([
         {
           name: 'Dimension',
-          open: false,
+          open: true,
           buildProps: [
             'width',
             'height',
@@ -59,7 +59,7 @@ export default (editor: grapesjs.Editor, opt: RequiredPluginOptions) => {
         },
         {
           name: 'Typography',
-          open: false,
+          open: true,
           buildProps: [
             'font-family',
             'font-size',
