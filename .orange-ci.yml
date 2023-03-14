@@ -1,0 +1,15 @@
+master:
+  push:
+    - docker:
+        image: node:16
+      stages:
+        - name: 依赖安装
+          script: npm install
+        - name: 构建
+          script: npm run build
+        - name: 复制 CNAME
+          script: cp CNAME ./dist
+        - name: oa-pages
+          type: git:oa-pages
+          options:
+            publishDir: dist
