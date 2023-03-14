@@ -2,9 +2,10 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
 
+
 const config = {
   plugins: [react()],
-  publicPath: process.env.NODE_ENV === 'production' ? '/gjs-email-editor/' : '/',
+  base: process.env.NODE_ENV === 'production' ? '/gjs-email-editor/' : '/',
 }
 
 if (process.env.BUILDTYPE === 'lib') {
