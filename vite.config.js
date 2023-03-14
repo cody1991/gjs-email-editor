@@ -4,6 +4,7 @@ import { resolve } from 'path'
 
 const config = {
   plugins: [react()],
+  publicPath: process.env.NODE_ENV === 'production' ? '/gjs-email-editor/' : '/',
 }
 
 if (process.env.BUILDTYPE === 'lib') {
