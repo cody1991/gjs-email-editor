@@ -12,7 +12,7 @@ const config = {
 if (process.env.BUILDTYPE === 'lib') {
   config.build = {
     lib: {
-      entry: resolve(__dirname, "src/mjml-editor/index.ts"),
+      entry: resolve(__dirname, "src/email-editor/index.ts"),
       name: "gjs-email-editor",
       fileName: (format) => `gjs-email-editor.${format}.js`,
     },

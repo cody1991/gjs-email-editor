@@ -2,8 +2,8 @@ import React, { useEffect } from 'react'
 import 'grapesjs/dist/css/grapes.min.css'
 import grapesJS from 'grapesjs'
 import FileSaver from 'file-saver';
-// import plugin from 'gjs-email-editor';
-import plugin, { zh as pluginZh, en as pluginEn } from './mjml-editor';
+import plugin from './email-editor';
+// import plugin, { zh as pluginZh, en as pluginEn } from './mjml-editor';
 import zh from 'grapesjs/locale/zh';
 import en from 'grapesjs/locale/en';
 
@@ -14,7 +14,7 @@ function App() {
   useEffect(() => {
     editor = grapesJS.init({
       i18n: {
-        locale: 'zh',
+        locale: 'en',
         localeFallback: 'en',
         detectLocale: false,
         messages: {
@@ -34,10 +34,10 @@ function App() {
       plugins: [plugin],
       pluginsOpts: {
         [plugin]: {
-          i18n: {
-            zh: { ...pluginZh },
-            en: { ...pluginEn }
-          }
+          // i18n: {
+          //   zh: { ...pluginZh },
+          //   en: { ...pluginEn }
+          // }
         },
       },
     });
@@ -68,6 +68,16 @@ function App() {
       editor.on('asset:upload:response', (response) => {
         console.log('asset:upload:response', response)
       });
+
+      editor.Components.addType('image', {
+        model: {
+          defaults: {
+            traits: [{ name: 'alt' }, { name: 'src' }, { name: 'id' }]
+          }
+        }
+      });
+
+
     })
   }, [])
   return <div>

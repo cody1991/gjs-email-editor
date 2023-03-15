@@ -1,0 +1,31 @@
+.gjs-pn-views-container {
+  width: 20%;
+}
+
+.gjs-pn-views {
+  width: 20%;
+}
+
+.gjs-pn-commands {
+  width: 80%;
+}
+
+.gjs-pn-options {
+  right: 20%;
+}
+
+.gjs-cv-canvas {
+  width: 80%;
+}
+
+.gjs-editor-cont input::-webkit-input-placeholder {
+  color: #ccc;
+}
+
+.gjs-editor-cont input::-moz-input-placeholder {
+  color: #ccc;
+}
+
+.gjs-editor-cont input::-ms-input-placeholder {
+  color: #ccc;
+}
