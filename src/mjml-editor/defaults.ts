@@ -36,6 +36,6 @@ export default {
   // exportOnly: '',
   primaryColor: '#14cc97',
   secondaryColor: '#fff',
-  tertiaryColor: '#4c9790',
+  tertiaryColor: '#fff',
   quaternaryColor: '#fff',
 };

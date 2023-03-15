@@ -1,3 +1,4 @@
+import './assets/custom.css';
 import type grapesjs from 'grapesjs';
 import loadBlocks from './blocks';
 import loadComponents from './components';
