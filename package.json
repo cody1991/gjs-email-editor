@@ -1,7 +1,7 @@
 {
   "name": "gjs-email-editor",
   "private": false,
-  "version": "1.0.15",
+  "version": "1.0.16",
   "type": "module",
   "files": [
     "lib"
@@ -13,7 +13,9 @@
     "preview": "vite preview",
     "deploy": "sh deploy.sh"
   },
-  "dependencies": {},
+  "dependencies": {
+    "juice": "^8.1.0"
+  },
   "devDependencies": {
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
