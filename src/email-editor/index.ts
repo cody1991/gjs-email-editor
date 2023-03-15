@@ -53,7 +53,9 @@ const plugin: grapesjs.Plugin<PluginOptions> = (
   }
 
   editor.onReady(() => {
-    editor.getWrapper().set('stylable', ['width', 'margin', 'background']);
+    editor
+      .getWrapper()
+      .set('stylable', ['width', 'margin', 'background-color', 'background']);
   });
 
   loadCommands(editor, options);
