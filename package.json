@@ -1,7 +1,7 @@
 {
   "name": "gjs-email-editor",
   "private": false,
-  "version": "1.0.12",
+  "version": "1.0.14",
   "type": "module",
   "files": [
     "lib"
@@ -19,12 +19,13 @@
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react": "^3.1.0",
     "file-saver": "^2.0.5",
-    "gjs-email-editor": "^1.0.11",
+    "gjs-email-editor": "1.0.12",
     "grapesjs": "^0.20.4",
     "mjml-browser": "^4.13.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "vite": "^4.1.0"
+    "vite": "^4.1.0",
+    "vite-plugin-style-inject": "^0.0.1"
   },
   "main": "./lib/gjs-email-editor.umd.js",
   "module": "./lib/gjs-email-editor.es.js",

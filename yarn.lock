@@ -545,12 +545,10 @@ gensync@^1.0.0-beta.2:
   resolved "https://mirrors.tencent.com/npm/gensync/-/gensync-1.0.0-beta.2.tgz#32a6ee76c3d7f52d46b2b1ae5d93fea8580a25e0"
   integrity sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==
 
-gjs-email-editor@^1.0.8:
-  version "1.0.8"
-  resolved "https://mirrors.tencent.com/npm/gjs-email-editor/-/gjs-email-editor-1.0.8.tgz#2bb987951122d476a34d93fffcee6a7d9d6c5d39"
-  integrity sha512-o80W/O5kDb8yMsLz5lr65XMGh8NdJeszWMdJ7gKBUOKndDb5q4lL3WJif3LBI95zveM92a5c/MBQFUD4kkW/mg==
-  dependencies:
-    mjml-browser "^4.13.0"
+gjs-email-editor@1.0.12:
+  version "1.0.12"
+  resolved "https://mirrors.tencent.com/npm/gjs-email-editor/-/gjs-email-editor-1.0.12.tgz#585a2c4deae7e7a6f48f7941e01d38404cde4c36"
+  integrity sha512-+jTLtHgRJ3LGFo31X53jqTiX2l5c9OOQtsKPupAYTvRJHM1nEcQ593jyILTAObBEgLm2GSOId0vDgvZAmcANzA==
 
 globals@^11.1.0:
   version "11.12.0"
@@ -750,6 +748,11 @@ update-browserslist-db@^1.0.10:
   dependencies:
     escalade "^3.1.1"
     picocolors "^1.0.0"
+
+vite-plugin-style-inject@^0.0.1:
+  version "0.0.1"
+  resolved "https://mirrors.tencent.com/npm/vite-plugin-style-inject/-/vite-plugin-style-inject-0.0.1.tgz#93a93ee472231e35bca120529beb4fb2a6fbb586"
+  integrity sha512-VsaBOb8ozMQn3kpMt4gIcyNt4BRMQ3Cq30eLIBtq1CH8U6iB1FnxVYspwITzJdXbMQA61QhyAx9QnNLwVRbDlg==
 
 vite@^4.1.0:
   version "4.1.4"

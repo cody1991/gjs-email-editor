@@ -1,10 +1,11 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import VitePluginStyleInject from 'vite-plugin-style-inject';
 import { resolve } from 'path'
 
 
 const config = {
-  plugins: [react()],
+  plugins: [react(), VitePluginStyleInject()],
   base: process.env.NODE_ENV === 'production' ? '/gjs-email-editor/' : '/',
 }
 
