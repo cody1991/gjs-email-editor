@@ -52,19 +52,15 @@ const plugin: grapesjs.Plugin<PluginOptions> = (
     document.head.appendChild(style);
   }
 
+  editor.onReady(() => {
+    editor.getWrapper().set('stylable', ['width', 'margin', 'background']);
+  });
+
   loadCommands(editor, options);
   loadBlocks(editor, options);
   loadPanels(editor, options);
 
   loadStyles(editor, options);
-
-  editor.Components.addType('image', {
-    model: {
-      defaults: {
-        traits: ['href', 'rel', 'alt', 'title'],
-      },
-    },
-  });
 };
 
 export default plugin;

@@ -85,15 +85,15 @@ function App() {
     </div>
 
     <button onClick={() => {
-      localStorage.setItem('gjs-email-editor', editor.runCommand('mjml-code'))
-      const blob = new Blob([editor.runCommand('mjml-code-to-html').html], { type: "text/html;charset=utf-8" });
+      localStorage.setItem('gjs-email-editor', editor.runCommand('gjs-get-inlined-html'))
+      const blob = new Blob([editor.runCommand('gjs-get-inlined-html')], { type: "text/html;charset=utf-8" });
       FileSaver.saveAs(blob, "hello world.html");
     }}>
       Click
     </button>
 
     <button onClick={() => {
-      localStorage.setItem('gjs-email-editor', editor.runCommand('mjml-code'))
+      localStorage.setItem('gjs-email-editor', editor.runCommand('gjs-get-inlined-html'))
     }}>
       Save
     </button>
