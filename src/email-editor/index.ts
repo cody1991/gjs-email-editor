@@ -52,11 +52,11 @@ const plugin: grapesjs.Plugin<PluginOptions> = (
     document.head.appendChild(style);
   }
 
-  editor.onReady(() => {
-    editor
-      .getWrapper()
-      .set('stylable', ['width', 'margin', 'background-color', 'background']);
-  });
+  // editor.onReady(() => {
+  //   editor
+  //     .getWrapper()
+  //     .set('stylable', ['width', 'margin', 'background-color', 'background']);
+  // });
 
   loadCommands(editor, options);
   loadBlocks(editor, options);

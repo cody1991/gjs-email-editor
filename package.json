@@ -1,7 +1,7 @@
 {
   "name": "gjs-email-editor",
   "private": false,
-  "version": "1.0.18",
+  "version": "1.0.19",
   "type": "module",
   "files": [
     "lib"
