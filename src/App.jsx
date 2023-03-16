@@ -14,7 +14,7 @@ function App() {
   useEffect(() => {
     editor = grapesJS.init({
       i18n: {
-        locale: 'en',
+        locale: 'zh',
         localeFallback: 'en',
         detectLocale: false,
         messages: {
@@ -38,11 +38,13 @@ function App() {
           //   zh: { ...pluginZh },
           //   en: { ...pluginEn }
           // }
+          updateStyleManager: false
         },
       },
     });
 
     editor.onReady(() => {
+      editor.getWrapper().set('stylable', true)
       editor.DomComponents.clear();
       editor.setComponents(
         localStorage.getItem('gjs-email-editor') || '<mjml><mj-body><mj-section><mj-column><mj-text>Content 1</mj-text></mj-column></mj-section></mj-body></mjml>',

@@ -149,7 +149,7 @@ export default function (
     activate: true,
     content: {
       type: 'image',
-      style: { color: 'black' },
+      style: { color: 'black', 'max-width': '100%' },
     },
   });
 
