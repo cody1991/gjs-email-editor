@@ -28,7 +28,7 @@ npm地址：https://www.npmjs.com/package/gjs-email-editor
 
 官网提供了 ckeditor 编辑器的插件：[ckeditor](https://github.com/GrapesJS/ckeditor)
 
-使用的 ckeditor 的 v4 版本，不支持 `import` 的方式，需要在入口 `html` 加入 `ckeditor` 链接，参考如下 https://github.com/cody1991/gjs-email-editor/blob/master/vite.config.js#L7-L14：
+使用的 ckeditor 的 v4 版本，不支持 `import` 的方式，需要在入口 `html` 加入 `ckeditor` 链接，参考如下 https://github.com/cody1991/gjs-email-editor/blob/master/vite.config.js#L7-L14 ：
 
 ```ts
 const htmlPluginConfig = htmlConfig({
@@ -45,7 +45,7 @@ const htmlPluginConfig = htmlConfig({
 
 TD 元素本身是不支持编辑的，所以进行了以下的改造，具体代码在：https://github.com/cody1991/gjs-email-editor/blob/master/src/email-editor/index.ts#L55-L83 
 
-GrapesJS 的 issues 也有几个相关的提问，比如 https://github.com/GrapesJS/grapesjs/issues/1262，可做参考
+GrapesJS 的 issues 也有几个相关的提问，比如 https://github.com/GrapesJS/grapesjs/issues/1262 ，可做参考
 
 ```ts
 editor.Components.addType('cell', {
@@ -83,7 +83,7 @@ editor.Components.addType('cell', {
 
 ## 自定义样式
 
-编辑器部分内容是嵌到 `iframe` 内部的，所以在外部我们无法方便的调整样式，可以参考这里的代码 https://github.com/cody1991/gjs-email-editor/blob/master/src/App.jsx#L25-L32：
+编辑器部分内容是嵌到 `iframe` 内部的，所以在外部我们无法方便的调整样式，可以参考这里的代码 https://github.com/cody1991/gjs-email-editor/blob/master/src/App.jsx#L25-L32 ：
 
 ```js
 canvasCss: `
