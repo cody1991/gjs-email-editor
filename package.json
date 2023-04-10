@@ -1,7 +1,13 @@
 {
   "name": "gjs-email-editor",
   "private": false,
-  "version": "1.0.23",
+  "version": "1.0.25",
+  "author": {
+    "name": "codytang",
+    "email": "codytang@tencent.com",
+    "url": "https://github.com/cody1991"
+  },
+  "homepage": "https://github.com/cody1991/gjs-email-editor",
   "type": "module",
   "files": [
     "lib"
