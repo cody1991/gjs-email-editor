@@ -10,8 +10,8 @@ export default function (
   if (opts.updateStyleManager) {
     const styleManagerSectors = [
       {
-        name: 'Dimension',
-        open: false,
+        name: 'Size',
+        open: true,
         buildProps: [
           'width',
           'height',
@@ -42,8 +42,8 @@ export default function (
         ],
       },
       {
-        name: 'Typography',
-        open: false,
+        name: 'Format',
+        open: true,
         buildProps: [
           'font-family',
           'font-size',
@@ -130,7 +130,7 @@ export default function (
         ],
       },
       {
-        name: 'Decorations',
+        name: 'Ornament',
         open: false,
         buildProps: [
           'background-color',

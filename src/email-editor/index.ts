@@ -4,6 +4,8 @@ import loadBlocks from './blocks';
 import loadPanels from './panels';
 import loadStyles from './styles';
 import type grapesjs from 'grapesjs';
+import en from './locale/en';
+import zh from './locale/zh';
 
 import { PluginOptions, RequiredPluginOptions } from './types';
 import defaultOpts from './defaults';
@@ -13,8 +15,6 @@ const plugin: grapesjs.Plugin<PluginOptions> = (
   opts: Partial<PluginOptions> = {},
 ) => {
   let config = editor.getConfig();
-
-  const i18n = editor.I18n;
 
   const options: RequiredPluginOptions = {
     ...defaultOpts,
@@ -52,11 +52,41 @@ const plugin: grapesjs.Plugin<PluginOptions> = (
     document.head.appendChild(style);
   }
 
-  // editor.onReady(() => {
-  //   editor
-  //     .getWrapper()
-  //     .set('stylable', ['width', 'margin', 'background-color', 'background']);
-  // });
+  editor.Components.addType('cell', {
+    isComponent(el) {
+      if (!(['td', 'th'].indexOf(el.tagName?.toLowerCase()) >= 0)) {
+        return false;
+      }
+
+      const allChildNodes: Node[] = [];
+      function collectChildNodes(arr: Node) {
+        const { childNodes } = arr;
+        if (childNodes.length > 0) {
+          for (let index = 0; index < childNodes.length; index += 1) {
+            const arrayChildNode = childNodes[index];
+            if (arrayChildNode.childNodes?.length > 0) {
+              collectChildNodes(arrayChildNode);
+            } else {
+              allChildNodes.push(arrayChildNode);
+            }
+          }
+        } else {
+          allChildNodes.push(arr);
+        }
+      }
+      collectChildNodes(el);
+
+      return !allChildNodes.every(
+        (item) => item.nodeType === 3 || item.nodeName?.toLowerCase() === 'br',
+      );
+    },
+  });
+
+  editor.I18n.addMessages({
+    en,
+    zh,
+    ...opts.i18n,
+  });
 
   loadCommands(editor, options);
   loadBlocks(editor, options);

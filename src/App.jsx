@@ -21,6 +21,18 @@ function App() {
           zh, en
         }
       },
+      canvasCss: `
+        .gjs-selected {
+          outline: 2px solid #14CC97 !important;
+        }
+        .gjs-dashed *[data-gjs-highlightable] {
+          outline: 1px dashed #14CC97;
+        }
+      `,
+      colorPicker: {
+        appendTo: 'parent',
+        offset: { top: 26, left: -166 },
+      },
       assetManager: {
         uploadFile: (ev) => {
           const files = ev.dataTransfer ? ev.dataTransfer.files : ev.target.files;

@@ -1,3 +1,247 @@
+.gjs-editor.gjs-one-bg.gjs-two-color {
+  background-color: #f2f3f5;
+}
+.gjs-pn-panel.gjs-pn-commands.gjs-one-bg.gjs-two-color {
+  background-color: #f2f3f5;
+  box-shadow: none;
+}
+.gjs-pn-panel.gjs-pn-devices-c.gjs-one-bg.gjs-two-color,
+.gjs-pn-panel.gjs-pn-options.gjs-one-bg.gjs-two-color {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+  padding: 6px;
+}
+.gjs-pn-panel.gjs-pn-devices-c.gjs-one-bg.gjs-two-color .gjs-pn-btn,
+.gjs-pn-panel.gjs-pn-options.gjs-one-bg.gjs-two-color .gjs-pn-btn {
+  padding: 0;
+  min-height: auto;
+}
+/* 右上角 样式、设置、图层操作区 */
+.gjs-pn-panel.gjs-pn-views.gjs-one-bg.gjs-two-color {
+  background-color: #fff;
+  padding: 0;
+  border-bottom: none;
+  border-top-left-radius: 16px;
+  right: -32px;
+}
+/* icon 原本 */
+.gjs-pn-panel.gjs-pn-devices-c.gjs-one-bg.gjs-two-color .gjs-pn-btn,
+.gjs-pn-panel.gjs-pn-options.gjs-one-bg.gjs-two-color .gjs-pn-btn,
+.gjs-pn-panel.gjs-pn-views.gjs-one-bg.gjs-two-color .gjs-pn-btn {
+  color: #666;
+}
+/* icon 点亮 */
+.gjs-pn-panel.gjs-pn-devices-c.gjs-one-bg.gjs-two-color .gjs-pn-btn.gjs-pn-active.gjs-four-color,
+.gjs-pn-panel.gjs-pn-options.gjs-one-bg.gjs-two-color .gjs-pn-btn.gjs-pn-active.gjs-four-color {
+  background-color: rgba(0,0,0,0);
+  box-shadow: none;
+  color: #14CC97;
+}
+/* 预览icon */
+.gjs-bg-main,
+.gjs-sm-colorp-c,
+.gjs-off-prv {
+  background-color: #fff;
+}
+.gjs-color-main,
+.gjs-sm-stack #gjs-sm-add,
+.gjs-off-prv {
+  color: #14CC97;
+  fill: #14CC97;
+}
+.gjs-off-prv {
+  padding: 8px;
+  font-size: 16px;
+}
+/* 右上角 样式、设置、图层操作区 icon */
+.gjs-pn-panel.gjs-pn-views.gjs-one-bg.gjs-two-color .gjs-pn-btn {
+  flex: 1;
+  text-align: -webkit-center;
+  margin-right: 0;
+  border-radius: none;
+  border-radius: 0;
+  padding: 7px;
+}
+/* 右上角 样式、设置、图层操作区 icon点亮 */
+.gjs-pn-panel.gjs-pn-views.gjs-one-bg.gjs-two-color .gjs-pn-btn.gjs-pn-active.gjs-four-color {
+  background-color: #14CC97;
+  box-shadow: none;
+  color: #fff;
+  flex: 1;
+  text-align: -webkit-center;
+  margin-right: 0;
+  border-radius: 0;
+}
+/* 右上角 样式、设置、图层操作区 第一个icon */
+.gjs-pn-panel.gjs-pn-views.gjs-one-bg.gjs-two-color .gjs-pn-btn:first-of-type {
+  border-top-left-radius: 16px;
+}
+.gjs-pn-panel.gjs-pn-views.gjs-one-bg.gjs-two-color .gjs-pn-btn.gjs-pn-active.gjs-four-color:first-of-type {
+  border-top-left-radius: 16px;
+}
+
+.gjs-pn-panel.gjs-pn-views-container.gjs-one-bg.gjs-two-color {
+  background-color: #f2f3f5;
+  box-shadow: none;
+  padding: 30px 0 0;
+  right: -32px;
+  border-top-left-radius: 16px;
+}
+
+.gjs-blocks-cs.gjs-one-bg.gjs-two-color {
+  background-color: #fff;
+}
+.gjs-block.gjs-one-bg.gjs-four-color-h {
+  background-color: #fff;
+  border: 1px solid #eee;
+  box-shadow: none;
+  color: #333;
+}
+.gjs-block.gjs-one-bg.gjs-four-color-h:hover {
+  color: #333;
+  border: 1px solid #14cc97;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+}
+.gjs-clm-tags.gjs-one-bg.gjs-two-color {
+  background-color: #fff;
+  color: #333;
+}
+/* style manager、setting - 未选择任何元素时 */
+.gjs-sm-header, .gjs-trt-header {
+  color: #333;
+}
+/* style manager - Classes部分 */
+.gjs-clm-tag.gjs-three-bg {
+  background-color: #14CC97;
+  color: #333;
+}
+.gjs-clm-tags #gjs-clm-new {
+  color: #666;
+}
+.gjs-clm-sel-id {
+  opacity: 1;
+}
+
+/* style manager - 编辑样式部分 */
+.gjs-sm-sectors.gjs-one-bg.gjs-two-color {
+  background-color: #fff;
+  color: #333;
+}
+/* 属性名称 */
+.gjs-sm-label {
+  color: #333;
+}
+/* Size、Format部分.gjs-sm-sector.gjs-sm-open */
+.gjs-category-open,
+.gjs-block-category.gjs-open,
+.gjs-sm-sector.gjs-sm-open {
+  border-bottom: none;
+}
+/* Size、Format、Ornament */
+.gjs-sm-sector-title {
+  background-color: #e7faf5;
+  border-bottom: none;
+  color: #14CC97;
+}
+.gjs-sm-field.gjs-sm-composite,
+.gjs-sm-composite.gjs-clm-select,
+.gjs-sm-composite.gjs-clm-field {
+  background-color: #fff;
+  border-radius: 2px;
+  border: 1px solid #eee;
+}
+.gjs-select option,
+.gjs-field-select option,
+.gjs-clm-select option,
+.gjs-sm-select option,
+.gjs-fields option,
+.gjs-sm-unit option {
+  background-color: #fff;
+  color: #333;
+}
+
+.gjs-trt-traits.gjs-one-bg.gjs-two-color {
+  background-color: #fff;
+  color: #333;
+}
+
+.gjs-field {
+  background-color: #fff;
+  border: 1px solid #eee;
+}
+/* 输入框向上向下箭头 */
+.gjs-field-arrow-u {
+  border-bottom: 4px solid #14CC97;
+}
+.gjs-field-arrow-d {
+  border-top: 4px solid #14CC97;
+}
+/* select下拉箭头 */
+.gjs-field .gjs-d-s-arrow {
+  border-top: 4px solid #14CC97;
+}
+/* input select textarea 文本颜色 */
+.gjs-field input,
+.gjs-field select,
+.gjs-field textarea {
+  color: #666;
+}
+/* segment横向选择器 */
+.gjs-radio-item-label {
+  color: #666;
+}
+/* background Images按钮 */
+.gjs-sm-property .gjs-sm-btn {
+  background-color: #14CC97;
+  color: #fff;
+}
+
+/* setting */
+.gjs-pn-panel.gjs-pn-views-container.gjs-one-bg.gjs-two-color {
+  background-color: #fff;
+}
+.gjs-trt-traits.gjs-one-bg.gjs-two-color {
+  color: #666;
+}
+.gjs-traits-label {
+  color: #333;
+  border-bottom: none;
+  margin-bottom: 0;
+}
+.gjs-layer-title-c.gjs-one-bg {
+  background-color: #fff;
+  color: #333;
+}
+.gjs-field.gjs-field-text input:focus{
+  outline: 1px solid #14CC97;
+}
+
+/* 图层 */
+/* .gjs-layer.gjs-selected .gjs-layer-title {
+  background-color: #e8faf5;
+  color: #14CC97;
+} */
+.gjs-layer.gjs-layer__t-text.no-select.gjs-two-color {
+  background-color: #fff;
+}
+.gjs-category-title,
+.gjs-layer-title,
+.gjs-block-category .gjs-title,
+.gjs-sm-sector-title {
+  border-bottom: 1px solid #f1f1f1;
+  height: 34px;
+}
+.gjs-layer-vis {
+  top: 9px;
+}
+.gjs-layer-count {
+  top: 12px;
+}
+.gjs-layer-move {
+  padding: 13px 7px;
+}
+
 .gjs-pn-views-container {
   width: 20%;
 }
@@ -15,7 +259,30 @@
 }
 
 .gjs-cv-canvas {
+  background-color: #fff;
   width: 80%;
+  border-radius: 16px;
+  top: 50px;
+  padding: 18px;
+  height: calc(100% - 56px);
+}
+.gjs-cv-canvas__frames {
+  left: 18px;
+  top: 18px;
+  width: calc(100% - 36px);
+  height: calc(100% - 36px);
+}
+.gjs-cv-canvas .gjs-highlighter,
+.gjs-cv-canvas .gjs-highlighter-sel {
+  outline: 1px solid #14CC97;
+}
+.gjs-toolbar {
+  background-color: #14CC97;
+} 
+.gjs-com-badge,
+.gjs-badge {
+  background-color: #14CC97;
+  
 }
 
 .gjs-editor-cont input::-webkit-input-placeholder {
@@ -28,4 +295,313 @@
 
 .gjs-editor-cont input::-ms-input-placeholder {
   color: #ccc;
+}
+
+/* 代码弹框 */
+.gjs-mdl-dialog.gjs-one-bg.gjs-two-color {
+  background-color: #fff;
+  color: #333;
+  border-radius: 16px;
+}
+.gjs-mdl-dialog.gjs-one-bg.gjs-two-color .gjs-mdl-header {
+  padding: 26px 32px;
+  border-bottom: 1px solid #f2f2f2;
+}
+.gjs-mdl-dialog.gjs-one-bg.gjs-two-color .gjs-mdl-header .gjs-mdl-btn-close {
+  right: 30px;
+  top: 18px;
+}
+.gjs-mdl-dialog.gjs-one-bg.gjs-two-color .gjs-mdl-content {
+  padding: 20px 32px 26px;
+}
+.gjs-mdl-dialog.gjs-one-bg.gjs-two-color .gjs-mdl-content #gjs-mdl-c{
+  padding: 12px 8px;
+  background-color: #eff8f6;
+}
+.gjs-mdl-dialog.gjs-one-bg.gjs-two-color .gjs-mdl-content #gjs-mdl-c .gjs-btn-prim.gjs-btn-import {
+  align-self: center !important;
+  width: 200px;
+  height: 48px;
+  border-radius: 100px;
+  opacity: 1;
+  background: #14cc97;
+  color: #fff;
+  font-size: 18px;
+  margin-top: 6px;
+}
+
+/* 文字-富文本输入框 */
+.gjs-rte-toolbar.gjs-one-bg {
+  border: none;
+  top: -41px !important;
+}
+.gjs-rte-toolbar.gjs-one-bg .cke_chrome {
+  border: none;
+}
+.gjs-rte-toolbar.gjs-one-bg .cke_chrome .cke_top {
+  border-bottom: none;
+  background-color: #14cc97;
+}
+
+/* font、font-size */
+.gjs-rte-toolbar.gjs-one-bg .cke_combo_on a.cke_combo_button,
+.gjs-rte-toolbar.gjs-one-bg .cke_combo_off a.cke_combo_button:hover,
+.gjs-rte-toolbar.gjs-one-bg .cke_combo_off a.cke_combo_button:focus,
+.gjs-rte-toolbar.gjs-one-bg .cke_combo_off a.cke_combo_button:active {
+  background: #14CC97;
+  border: 1px solid #14CC97;
+}
+/* 竖线 */
+.gjs-rte-toolbar.gjs-one-bg .cke_combo:after {
+  border-right: 1px solid #fff;
+  height: 14px;
+  margin-top: 7px;
+}
+.gjs-rte-toolbar.gjs-one-bg .cke_panel {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #ffff;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+  top: 43px !important;
+}
+/* 箭头 */
+.gjs-rte-toolbar.gjs-one-bg .cke_combo.cke_combo_off .cke_combo_arrow {
+  border-left: 3px solid #fff;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid transparent;
+}
+.gjs-rte-toolbar.gjs-one-bg .cke_combo.cke_combo_on .cke_combo_arrow {
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 3px solid #484848;
+}
+.gjs-rte-toolbar.gjs-one-bg .cke_combo.cke_combo_off .cke_combo_open {
+  margin: 1px 12px 1px;
+}
+.gjs-rte-toolbar.gjs-one-bg .cke_combo.cke_combo_on .cke_combo_open {
+  margin: 1px 12px 1px;
+}
+/* 文本 */
+.gjs-rte-toolbar.gjs-one-bg .cke_combo.cke_combo_off .cke_combo_text {
+  color: #fff;
+  width: auto;
+  padding-left: 12px;
+}
+.gjs-rte-toolbar.gjs-one-bg .cke_combo.cke_combo_on .cke_combo_text {
+  color: #484848;
+  width: auto;
+  padding-left: 12px;
+}
+/* .gjs-rte-toolbar.gjs-one-bg .cke_panel_frame .cke_panel_grouptitle {
+  background: #fff;
+} */
+
+/* icons */
+.gjs-rte-toolbar.gjs-one-bg .cke_button_icon {
+  width: 18px;
+  height: 18px;
+}
+.gjs-rte-toolbar.gjs-one-bg a.cke_button_off .cke_button__bold_icon {
+  background: url(./imgs/bold-white.svg) no-repeat !important;
+}
+.gjs-rte-toolbar.gjs-one-bg a.cke_button_off .cke_button__italic_icon {
+  background: url(./imgs/italic-white.svg) no-repeat !important;
+}
+.gjs-rte-toolbar.gjs-one-bg a.cke_button_off .cke_button__strike_icon {
+  background: url(./imgs/strike-white.svg) no-repeat !important;
+}
+.gjs-rte-toolbar.gjs-one-bg a.cke_button_off .cke_button__numberedlist_icon {
+  background: url(./imgs/numberedlist-white.svg) no-repeat !important;
+}
+.gjs-rte-toolbar.gjs-one-bg a.cke_button_off .cke_button__bulletedlist_icon {
+  background: url(./imgs/bulletedlist-white.svg) no-repeat !important;
+}
+.gjs-rte-toolbar.gjs-one-bg a.cke_button_off .cke_button__link_icon {
+  background: url(./imgs/link-white.svg) no-repeat !important;
+}
+.gjs-rte-toolbar.gjs-one-bg a.cke_button_disabled .cke_button__unlink_icon {
+  background: url(./imgs/unlink-white.svg) no-repeat !important;
+  opacity: 0.5;
+}
+.gjs-rte-toolbar.gjs-one-bg a.cke_button_off .cke_button__unlink_icon {
+  background: url(./imgs/unlink-white.svg) no-repeat !important;
+}
+.gjs-rte-toolbar.gjs-one-bg a.cke_button_off .cke_button__textcolor_icon {
+  background: url(./imgs/textcolor-white.svg) no-repeat !important;
+}
+/* .gjs-rte-toolbar.gjs-one-bg a.cke_button_on .cke_button__textcolor_icon {
+  background: url(./imgs/bgcolor-white.svg) no-repeat !important;
+} */
+.gjs-rte-toolbar.gjs-one-bg a.cke_button_off .cke_button__bgcolor_icon {
+  background: url(./imgs/bgcolor-white.svg) no-repeat !important;
+}
+/* 竖线 */
+.gjs-rte-toolbar.gjs-one-bg .cke_toolgroup a.cke_button:last-child:after,
+.gjs-rte-toolbar.gjs-one-bg .cke_toolgroup a.cke_button.cke_button_disabled:hover:last-child:after {
+  border-right: 1px solid #fff;
+  height: 14px;
+  margin-top: 7px;
+}
+/* 箭头 */
+.gjs-rte-toolbar.gjs-one-bg a.cke_button.cke_button__textcolor.cke_button_off .cke_button_arrow,
+.gjs-rte-toolbar.gjs-one-bg a.cke_button.cke_button__bgcolor.cke_button_off .cke_button_arrow {
+  border-left: 3px solid #fff;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid transparent;
+}
+.gjs-rte-toolbar.gjs-one-bg a.cke_button_on,
+.gjs-rte-toolbar.gjs-one-bg a.cke_button_off:hover,
+.gjs-rte-toolbar.gjs-one-bg a.cke_button_off:focus,
+.gjs-rte-toolbar.gjs-one-bg a.cke_button_off:active {
+  background: #14CC97;
+  border: 1px solid #14CC97;
+}
+
+/* 文字-富文本输入框-链接弹窗 */
+table.cke_dialog.cke_browser_webkit {
+  width: 693px;
+}
+.cke_dialog_body {
+  border-radius: 16px;
+}
+.cke_dialog_body .cke_dialog_title {
+  border-radius: 16px 16px 0 0;
+  padding: 26px 32px;
+  background: #fff;
+  color: #333;
+  font-size: 20px;
+  border-bottom: 1px solid #eee;
+}
+.cke_ltr a.cke_dialog_close_button {
+  right: 30px;
+  top: 28px;
+}
+div.cke_dialog_tabs {
+  margin: 0 20px;
+}
+div.cke_dialog_tabs a.cke_dialog_tab.cke_dialog_tab_selected {
+  background-color: #e8faf5;
+  color: #14CC97;
+  padding: 8px;
+  border: 1px solid #E8FAF5;
+}
+div.cke_dialog_tabs a.cke_dialog_tab {
+  border: 1px solid #E8FAF5;
+  background-color: #fff;
+  padding: 8px;
+}
+.cke_dialog_body table.cke_dialog_contents {
+  border-top: none;
+  border-radius: 0 0 16px 16px;
+  width: 693px;
+}
+.cke_dialog_contents_body div.cke_dialog_ui_text,
+.cke_dialog_contents_body .cke_dialog_ui_select,
+.cke_dialog_contents_body .cke_dialog_ui_hbox_last>a.cke_dialog_ui_button {
+  padding: 0 20px;
+}
+.cke_dialog_contents_body .cke_dialog_ui_select {
+  padding-right: 0;
+}
+.cke_dialog_ui_input_text input.cke_dialog_ui_input_text,
+.cke_dialog_ui_input_text input.cke_dialog_ui_input_password,
+.cke_dialog_ui_input_text textarea.cke_dialog_ui_input_textarea,
+.cke_dialog_ui_input_select select.cke_dialog_ui_input_select {
+  border-radius: 6px;
+  height: 40px;
+  margin-top: 4px;
+  margin-left: 0px;
+  border: 1px solid #eee;
+}
+.cke_dialog_ui_input_text input.cke_dialog_ui_input_text:focus,
+.cke_dialog_ui_input_text input.cke_dialog_ui_input_password:focus,
+.cke_dialog_ui_input_text textarea.cke_dialog_ui_input_textarea:focus,
+.cke_dialog_ui_input_select select.cke_dialog_ui_input_select:focus {
+  border: 1px solid #14CC97;
+  margin-top: 4px;
+}
+.cke_dialog_contents_body div.cke_dialog_ui_input_select {
+  width: 216px;
+}
+.cke_dialog .cke_dialog_contents_body .cke_dialog_ui_vbox_child fieldset {
+  border: 1px solid #eee;
+}
+.cke_dialog_contents_body .cke_dialog_ui_hbox .cke_dialog_ui_checkbox {
+  margin-bottom: 10px;
+}
+.cke_dialog_contents_body input.cke_dialog_ui_checkbox_input:focus,
+.cke_dialog_contents_body input.cke_dialog_ui_checkbox_input:active,
+.cke_dialog_contents_body input.cke_dialog_ui_radio_input:focus,
+.cke_dialog_contents_body input.cke_dialog_ui_radio_input:active {
+  border: 1px solid #14CC97;
+  outline: none;
+}
+#cke_124_uiElement .cke_dialog_ui_hbox_first,
+#cke_130_uiElement .cke_dialog_ui_hbox_first,
+#cke_137_uiElement .cke_dialog_ui_hbox_first,
+#cke_143_uiElement .cke_dialog_ui_hbox_first {
+ width: 10% !important;
+ text-align: center;
+ line-height: 4;
+}
+.cke_dialog_contents .cke_dialog_footer {
+  border-top: none;
+  background: #fff;
+  text-align: center;
+  padding-bottom: 6px;
+  border-radius: 0 0 16px 16px;
+}
+.cke_dialog_contents .cke_dialog_footer a.cke_dialog_ui_button_ok {
+  background: #14CC97;
+  border: 1px solid #14CC97;
+  color: #fff;
+  height: 48px;
+  line-height: 46px;
+  width: 200px;
+  border-radius: 100px;
+}
+.cke_dialog_contents .cke_dialog_footer a.cke_dialog_ui_button_cancel {
+  background: #fff;
+  border: 1px solid #ddd;
+  color: #999;
+  height: 48px;
+  line-height: 46px;
+  width: 200px;
+  border-radius: 100px;
+}
+.cke_dialog_contents .cke_dialog_footer .cke_dialog_footer_buttons a.cke_dialog_ui_button span {
+  font-size: 18px;
+}
+.cke_dialog_contents .cke_dialog_footer .cke_resizer {
+  display: none;
+}
+
+/* 选择图片弹窗 */
+.gjs-mdl-dialog.gjs-one-bg.gjs-two-color .gjs-mdl-content #gjs-mdl-c .gjs-asset-manager {
+  height: 326px;
+  margin: -12px -8px
+}
+.gjs-mdl-dialog.gjs-one-bg.gjs-two-color .gjs-mdl-content #gjs-mdl-c .gjs-asset-manager .gjs-am-file-uploader>form {
+  margin-bottom: 0;
+  background-color: #fff;
+  border: 1px solid #14CC97;
+}
+.gjs-mdl-dialog.gjs-one-bg.gjs-two-color .gjs-mdl-content #gjs-mdl-c .gjs-asset-manager .gjs-am-assets-cont {
+  background-color: #eff8f6;
+}
+.gjs-mdl-dialog.gjs-one-bg.gjs-two-color .gjs-mdl-content #gjs-mdl-c .gjs-asset-manager .gjs-am-assets-cont .gjs-field input,
+.gjs-mdl-dialog.gjs-one-bg.gjs-two-color .gjs-mdl-content #gjs-mdl-c .gjs-asset-manager .gjs-am-assets-cont .gjs-field select,
+.gjs-mdl-dialog.gjs-one-bg.gjs-two-color .gjs-mdl-content #gjs-mdl-c .gjs-asset-manager .gjs-am-assets-cont .gjs-field textarea {
+  height: 40px;
+  border-radius: 6px;
+  border: 1px solid #14CC97;
+}
+.gjs-mdl-dialog.gjs-one-bg.gjs-two-color .gjs-mdl-content #gjs-mdl-c .gjs-asset-manager .gjs-am-assets-cont .gjs-am-add-asset .gjs-am-add-field {
+  border-radius: 6px;
+}
+.gjs-mdl-dialog.gjs-one-bg.gjs-two-color .gjs-mdl-content #gjs-mdl-c .gjs-asset-manager .gjs-am-assets-cont .gjs-btn-prim {
+  height: 40px;
+  border-radius: 24px;
+  background: #14cc97;
+  color: #fff;
 }

@@ -113,12 +113,6 @@ export interface PluginOptions {
   juiceOpts?: juice.Options;
 
   /**
-   * Confirm text before clearing the canvas.
-   * @default 'Are you sure you want to clear the canvas?'
-   */
-  textCleanCanvas?: string;
-
-  /**
    * Load custom preset theme.
    * @default true
    */
@@ -147,6 +141,12 @@ export interface PluginOptions {
    * @default #35d7bb
    */
   quaternaryColor?: string;
+
+  /**
+   * I18n object containing languages, [more info](https://grapesjs.com/docs/modules/I18n.html#configuration).
+   * @default {}
+   */
+  i18n?: Record<string, any>;
 }
 
 export type RequiredPluginOptions = Required<PluginOptions>;

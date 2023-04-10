@@ -1,5 +1,6 @@
 export default {
   blocks: [
+    'wrapper',
     'sect100',
     'sect50',
     'sect30',
@@ -47,4 +48,5 @@ export default {
   secondaryColor: '#dae5e6',
   tertiaryColor: '#4c9790',
   quaternaryColor: '#35d7bb',
+  i18n: {},
 };
