@@ -14,6 +14,8 @@ GrapesJS 提供了不少的组件和 API，但是要组件成型的编辑器还�
 
 而这个仓库就是基于 [grapesjs-preset-newsletter](https://github.com/GrapesJS/preset-newsletter) 的基础上，再进行二次开发的。
 
+npm地址：https://www.npmjs.com/package/gjs-email-editor
+
 # 学习建议
 
 官方的学习文档：https://grapesjs.com/docs/ ，以及 API介绍：https://grapesjs.com/docs/api/ ，基本能掌握 GrapesJS 的使用
