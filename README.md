@@ -1,150 +1,24 @@
-# GrapesJS Preset Newsletter
+# gjs-email-editor
 
-This preset configures GrapesJS to be used as a Newsletter Builder with some unique features and blocks composed specifically for being rendered correctly inside all major email clients.
+基于 [GrapesJS](https://grapesjs.com/) 框架及其插件 [preset-newsletter](https://github.com/GrapesJS/preset-newsletter) 二次开发的邮件编辑器
 
-[Demo](http://grapesjs.com/demo-newsletter-editor.html)
+GrapesJS 是一个开源的 HTML 编辑器，通过低代码的形式，快速创建 HTML / Email 代码来使用，有很不错的扩展性，开发者可以在 GrapesJS 核心功能上自定义自己的编辑器
 
+官方已经提供了不少的插件，详情列表可参考：https://github.com/GrapesJS/grapesjs#plugins 。可以重点关注下面三个插件：
 
-> The demo might include external plugins, you can check the full demo code [here](https://github.com/grapesjs/grapesjs/blob/gh-pages/demo-newsletter-editor.html).
+* [grapesjs-preset-webpage](https://github.com/GrapesJS/preset-webpage) - Webpage Builder
+* [grapesjs-preset-newsletter](https://github.com/GrapesJS/preset-newsletter) - Newsletter Builder
+* [grapesjs-mjml](https://github.com/GrapesJS/mjml) - Newsletter Builder with MJML components
 
-<p align="center"><img src="http://grapesjs.com/img/grapesjs-preset-newsletter.jpg" alt="GrapesJS" width="500" align="center"/></p>
-<br/>
+GrapesJS 提供了不少的组件和 API，但是要组件成型的编辑器还是要花不少的功夫的（参考官方教程 [getting-started](https://grapesjs.com/docs/getting-started.html)），上面三个插件类似于 脚手架，帮你完成了初始的编辑器模型。
 
+而这个仓库就是基于 [grapesjs-preset-newsletter](https://github.com/GrapesJS/preset-newsletter) 的基础上，再进行二次开发的。
 
-## Summary
+# 学习建议
 
-* Plugin name: **`grapesjs-preset-newsletter`**
-* Commands
-  * `gjs-get-inlined-html` Get html with inlined CSS
-  * `gjs-open-import-template` Opens a modal for the import
-  * `gjs-toggle-images` Enable/Disable images
-* Blocks
-  * `sect100` A section with 1 100% cell inside
-  * `sect50` A section with 2 50% cells inside
-  * `sect30` A section with 3 33.3333% cells inside
-  * `sect37` A section with 2 cells inside: 30% and 70%
-  * `button` Simple button
-  * `divider` Divider block
-  * `text` Simple text component
-  * `text-sect` A block with 2 text components, respectively for the heading and paragraph
-  * `image` Simple image component
-  * `quote` Text component for quotes
-  * `grid-items` Block of 2 components in row
-  * `list-items` List of 2 components
+官方的学习文档：https://grapesjs.com/docs/ ，以及 API介绍：https://grapesjs.com/docs/api/ ，基本能掌握 GrapesJS 的使用
 
+之后阅读 https://github.com/GrapesJS/preset-newsletter 的源码（也很简单，几百行代码而已），基本就能自己进行二次开发了
 
+# 注意事项
 
-## Options
-
-| Option | Description | Default |
-| - | - | - |
-| `blocks` | Which blocks to add | `All available blocks` |
-|`block`| Add custom block options, based on block id|`(blockId) => ({})`|
-|`cmdOpenImport`| Import command id |`gjs-open-import-template`|
-|`cmdTglImages`| Toggle images command id |`gjs-toggle-images`|
-|`cmdInlineHtml`| Get inlined HTML command id |`gjs-get-inlined-html`|
-|`modalTitleImport`| Title for the import modal |`Import template`|
-|`modalTitleExport`| Title for the export modal |`Export template`|
-|`modalLabelExport`| Label for the export modal |`''`|
-|`modalLabelImport`| Label for the import modal |`''`|
-|`modalBtnImport`| Label for the import button |`Import`|
-|`importPlaceholder`| Template as a placeholder inside import modal |`''`|
-|`inlineCss`| If `true`, inlines CSS on export |`true`|
-|`updateStyleManager`| Update Style Manager with more reliable style properties to use for newsletters |`true`|
-|`showStylesOnChange`| Show the Style Manager on component change |`true`|
-|`showBlocksOnLoad`| Show the Block Manager on load |`true`|
-|`codeViewerTheme`| Code viewer theme |`hopscotch`|
-|`juiceOpts`| Custom options for the `juice` HTML inliner |`{}`|
-|`textCleanCanvas`| Confirm text before clearing the canvas |`Are you sure you want to clear the canvas?`|
-|`useCustomTheme`| Load custom preset theme |`true`|
-|`cellStyle`|  Default style used inside blocks `td`s |`{ padding: 0, margin: 0, 'vertical-align': 'top' }`|
-|`tableStyle`|  Default style used for blocks tables |`{ height: '150px', margin: '0 auto 10px auto', padding: '5px 5px 5px 5px', width: '100%' }`|
-
-
-
-## Download
-
-* CDN
-  * `https://unpkg.com/grapesjs-preset-newsletter`
-* NPM
-  * `npm i grapesjs-preset-newsletter`
-* GIT
-  * `git clone https://github.com/grapesjs/preset-newsletter.git`
-
-
-## Usage
-
-Directly in the browser
-```html
-<link href="path/to/grapes.min.css" rel="stylesheet"/>
-<script src="path/to/grapes.min.js"></script>
-<script src="path/to/grapesjs-preset-newsletter.min.js"></script>
-
-<div id="gjs"></div>
-
-<script type="text/javascript">
-  var editor = grapesjs.init({
-      container : '#gjs',
-      ...
-      plugins: ['grapesjs-preset-newsletter'],
-      pluginsOpts: {
-        'grapesjs-preset-newsletter': {
-          // options
-        }
-      }
-  });
-</script>
-```
-
-Modern javascript
-```js
-import grapesjs from 'grapesjs';
-import plugin from 'grapesjs-preset-newsletter';
-
-const editor = grapesjs.init({
-  container : '#gjs',
-  // ...
-  plugins: [plugin],
-  pluginsOpts: {
-    [plugin]: { /* options */ }
-  }
-  // or
-  plugins: [
-    editor => plugin(editor, { /* options */ }),
-  ],
-});
-```
-
-
-
-## Development
-
-Clone the repository
-
-```sh
-$ git clone https://github.com/grapesjs/preset-newsletter.git
-$ cd preset-newsletter
-```
-
-Install it
-
-```sh
-$ npm i
-```
-
-Start the dev server
-
-```sh
-$ npm start
-```
-
-Build before the commit. This will also increase the patch level version of the package
-
-```sh
-$ npm run build
-```
-
-
-## License
-
-BSD 3-Clause
