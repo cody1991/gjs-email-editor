@@ -1,193 +1,129 @@
-# GrapesJS MJML
+# GrapesJS Preset Newsletter
 
-> Requires GrapesJS v0.15.9 or higher
+This preset configures GrapesJS to be used as a Newsletter Builder with some unique features and blocks composed specifically for being rendered correctly inside all major email clients.
 
-[![build](https://github.com/artf/grapesjs-mjml/workflows/build/badge.svg)](https://github.com/artf/grapesjs-mjml/actions)
-
-This plugin enables the usage of [MJML](https://mjml.io/) components inside the GrapesJS environment. MJML components are rendered in real-time using the official v4 compiler (+ some mocks to make it run in the browser), therefore the result is, almost, the same as using the [MJML Live Editor](https://mjml.io/try-it-live).
+[Demo](http://grapesjs.com/demo-newsletter-editor.html)
 
 
-[Demo](http://grapesjs.com/demo-mjml.html)
-<p align="center"><img src="http://grapesjs.com/img/grapesjs-mjml-demo.jpg" alt="GrapesJS" align="center"/></p>
+> The demo might include external plugins, you can check the full demo code [here](https://github.com/grapesjs/grapesjs/blob/gh-pages/demo-newsletter-editor.html).
+
+<p align="center"><img src="http://grapesjs.com/img/grapesjs-preset-newsletter.jpg" alt="GrapesJS" width="500" align="center"/></p>
 <br/>
 
-Supported MJML components:
-`mj-mjml`
-`mj-head`
-`mj-body`
-`mj-wrapper`
-`mj-group`
-`mj-section`
-`mj-column`
-`mj-text`
-`mj-image`
-`mj-button`
-`mj-social`
-`mj-social-element`
-`mj-divider`
-`mj-spacer`
-`mj-style`
-`mj-font`
-`mj-hero`
-`mj-navbar`
-`mj-navbar-link`
-`mj-raw`
+
+## Summary
+
+* Plugin name: **`grapesjs-preset-newsletter`**
+* Commands
+  * `gjs-get-inlined-html` Get html with inlined CSS
+  * `gjs-open-import-template` Opens a modal for the import
+  * `gjs-toggle-images` Enable/Disable images
+* Blocks
+  * `sect100` A section with 1 100% cell inside
+  * `sect50` A section with 2 50% cells inside
+  * `sect30` A section with 3 33.3333% cells inside
+  * `sect37` A section with 2 cells inside: 30% and 70%
+  * `button` Simple button
+  * `divider` Divider block
+  * `text` Simple text component
+  * `text-sect` A block with 2 text components, respectively for the heading and paragraph
+  * `image` Simple image component
+  * `quote` Text component for quotes
+  * `grid-items` Block of 2 components in row
+  * `list-items` List of 2 components
+
 
 
 ## Options
 
-|Option|Description|Default|
-|-|-|-
-|`blocks`|Which blocks to add|(all)|
-|`block`|Add custom block options, based on block id.|`(blockId) => ({})`|
-|`codeViewerTheme`|Code viewer theme.|`hopscotch`|
-|`fonts`|Custom fonts on exported HTML header [more info](https://github.com/mjmlio/mjml#inside-nodejs)|`{}`|
-|`importPlaceholder`|Placeholder MJML template for the import modal|`''`|
-|`imagePlaceholderSrc`|Image placeholder source|`'https://via.placeholder.com/350x250/78c5d6/fff'`|
-|`i18n`|I18n object containing language [more info](https://grapesjs.com/docs/modules/I18n.html#configuration)|`{}`|
-|`overwriteExport`|Overwrite default export command|`true`|
-|`preMjml`|String before the MJML in export code|`''`|
-|`postMjml`|String after the MJML in export code|`''`|
-|`resetBlocks`|Clean all previous blocks if true|`true`|
-|`resetDevices`|Clean all previous devices and set a new one for mobile|`true`|
-|`resetStyleManager`|Reset the Style Manager and add new properties for MJML|`true`|
-|`resetDevices`|Clean all previous devices and set a new one for mobile|`true`|
-|`hideSelector`|Hide the default selector manager|`true`|
-|`useXmlParser`|Experimental: use XML parser instead of HTML. This should allow importing void MJML elements (without closing tags) like `<mj-image/>`|`false`|
-|`columnsPadding`|Column padding (this way it's easier to select columns)|`10px 0`|
-|`useCustomTheme`|Load custom preset theme|`true`|
+| Option | Description | Default |
+| - | - | - |
+| `blocks` | Which blocks to add | `All available blocks` |
+|`block`| Add custom block options, based on block id|`(blockId) => ({})`|
+|`cmdOpenImport`| Import command id |`gjs-open-import-template`|
+|`cmdTglImages`| Toggle images command id |`gjs-toggle-images`|
+|`cmdInlineHtml`| Get inlined HTML command id |`gjs-get-inlined-html`|
+|`modalTitleImport`| Title for the import modal |`Import template`|
+|`modalTitleExport`| Title for the export modal |`Export template`|
+|`modalLabelExport`| Label for the export modal |`''`|
+|`modalLabelImport`| Label for the import modal |`''`|
+|`modalBtnImport`| Label for the import button |`Import`|
+|`importPlaceholder`| Template as a placeholder inside import modal |`''`|
+|`inlineCss`| If `true`, inlines CSS on export |`true`|
+|`updateStyleManager`| Update Style Manager with more reliable style properties to use for newsletters |`true`|
+|`showStylesOnChange`| Show the Style Manager on component change |`true`|
+|`showBlocksOnLoad`| Show the Block Manager on load |`true`|
+|`codeViewerTheme`| Code viewer theme |`hopscotch`|
+|`juiceOpts`| Custom options for the `juice` HTML inliner |`{}`|
+|`textCleanCanvas`| Confirm text before clearing the canvas |`Are you sure you want to clear the canvas?`|
+|`useCustomTheme`| Load custom preset theme |`true`|
+|`cellStyle`|  Default style used inside blocks `td`s |`{ padding: 0, margin: 0, 'vertical-align': 'top' }`|
+|`tableStyle`|  Default style used for blocks tables |`{ height: '150px', margin: '0 auto 10px auto', padding: '5px 5px 5px 5px', width: '100%' }`|
+
 
 
 ## Download
 
-* `npm i grapesjs-mjml`
-
+* CDN
+  * `https://unpkg.com/grapesjs-preset-newsletter`
+* NPM
+  * `npm i grapesjs-preset-newsletter`
+* GIT
+  * `git clone https://github.com/grapesjs/preset-newsletter.git`
 
 
 ## Usage
 
+Directly in the browser
 ```html
 <link href="path/to/grapes.min.css" rel="stylesheet"/>
 <script src="path/to/grapes.min.js"></script>
-<script src="path/to/grapesjs-mjml.min.js"></script>
+<script src="path/to/grapesjs-preset-newsletter.min.js"></script>
 
-<div id="gjs">
-  <mjml>
-    <mj-body>
-      <!-- Your MJML body here -->
-      <mj-section>
-        <mj-column>
-          <mj-text>My Company</mj-text>
-        </mj-column>
-      </mj-section>
-    </mj-body>
-  </mjml>
-</div>
+<div id="gjs"></div>
 
 <script type="text/javascript">
-  const editor = grapesjs.init({
-      fromElement: true,
-      container: '#gjs',
-      plugins: ['grapesjs-mjml'],
+  var editor = grapesjs.init({
+      container : '#gjs',
+      ...
+      plugins: ['grapesjs-preset-newsletter'],
       pluginsOpts: {
-        'grapesjs-mjml': {/* ...options */}
+        'grapesjs-preset-newsletter': {
+          // options
+        }
       }
   });
 </script>
 ```
 
-#### Or using ESM imports:
-
+Modern javascript
 ```js
-import 'grapesjs/dist/css/grapes.min.css'
-import grapesJS from 'grapesjs'
-import grapesJSMJML from 'grapesjs-mjml'
+import grapesjs from 'grapesjs';
+import plugin from 'grapesjs-preset-newsletter';
 
-grapesJS.init({
-   fromElement: true,
-   container: '#gjs',
-   plugins: [grapesJSMJML],
-   pluginsOpts: {
-      [grapesJSMJML]: {/* ...options */}
-   },
+const editor = grapesjs.init({
+  container : '#gjs',
+  // ...
+  plugins: [plugin],
+  pluginsOpts: {
+    [plugin]: { /* options */ }
+  }
+  // or
+  plugins: [
+    editor => plugin(editor, { /* options */ }),
+  ],
 });
 ```
 
-#### i18n usage:
 
-```js
-import 'grapesjs/dist/css/grapes.min.css'
-import grapesJS from 'grapesjs'
-import nl from 'grapesjs/locale/nl'
-import grapesJSMJML from 'grapesjs-mjml'
-import mjmlNL from 'grapesjs-mjml/locale/nl'
-
-grapesJS.init({
-   fromElement: true,
-   container: '#gjs',
-   i18n: {
-      // locale: 'en', // default locale
-      // detectLocale: true, // by default, the editor will detect the language
-      // localeFallback: 'en', // default fallback
-      messages: { nl: nl },
-   },
-   plugins: [grapesJSMJML],
-   pluginsOpts: {
-      [grapesJSMJML]: {
-        // Optional options
-        i18n: { nl: mjmlNL }
-      }
-   },
-});
-```
-
-#### fonts usage:
-
-```js
-import 'grapesjs/dist/css/grapes.min.css'
-import grapesJS from 'grapesjs'
-import grapesJSMJML from 'grapesjs-mjml'
-
-const editor = grapesJS.init({
-   fromElement: true,
-   container: '#gjs',
-   plugins: [grapesJSMJML],
-   pluginsOpts: {
-      [grapesJSMJML]: {
-        // The font imports are included on HTML <head/> when fonts are used on the template
-        fonts: {
-          Montserrat: 'https://fonts.googleapis.com/css?family=Montserrat',
-          'Open Sans': 'https://fonts.googleapis.com/css?family=Open+Sans'
-        }
-      }
-   },
-});
-
-// add custom fonts options on editor's font list
-editor.on('load', () => {
-  const styleManager = editor.StyleManager;
-  const fontProperty = styleManager.getProperty('typography', 'font-family');
-
-  const list = [];
-  // empty list
-  fontProperty.set('list', list);
-
-  // custom list
-  list.push(fontProperty.addOption({value: 'Montserrat, sans-serif', name: 'Montserrat'}));
-  list.push(fontProperty.addOption({value: 'Open Sans, sans-serif', name: 'Open Sans'}));
-  fontProperty.set('list', list);
-
-  styleManager.render();
-});
-```
 
 ## Development
 
 Clone the repository
 
 ```sh
-$ git clone https://github.com/artf/grapesjs-mjml.git
-$ cd grapesjs-mjml
+$ git clone https://github.com/grapesjs/preset-newsletter.git
+$ cd preset-newsletter
 ```
 
 Install it
@@ -202,13 +138,12 @@ Start the dev server
 $ npm start
 ```
 
-## Releasing
+Build before the commit. This will also increase the patch level version of the package
 
-1) Run `npm run v:patch` to bump the version in package.json and create a git tag
-2) Push the commit + new tag
-3) Go to github and draft a new release
-4) Select the new tag and add some release notes
-5) Hit publish, the release will automatically publish to npm
+```sh
+$ npm run build
+```
+
 
 ## License
 
