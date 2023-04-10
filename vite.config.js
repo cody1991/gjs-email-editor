@@ -14,9 +14,8 @@ const htmlPluginConfig = htmlConfig({
 });
 
 const config = {
-  plugins: [react(), VitePluginStyleInject()],
+  plugins: [react(), VitePluginStyleInject(), htmlPluginConfig],
   base: process.env.NODE_ENV === 'production' ? '/gjs-email-editor/' : '/',
-  plugins: [htmlPluginConfig]
 }
 
 if (process.env.BUILDTYPE === 'lib') {
