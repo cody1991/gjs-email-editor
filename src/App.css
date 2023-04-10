@@ -2,3 +2,24 @@
   padding: 0;
   margin: 0;
 }
+
+.demo-button {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.demo-button button {
+  appearance: none;
+  border: 1px solid #000;
+  background-color: transparent;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.demo-button button:hover {
+  color: #fff;
+  background-color: #000;
+  transition: all 0.5s;
+}

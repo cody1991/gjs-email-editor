@@ -113,24 +113,27 @@ function App() {
 
     })
   }, [])
-  return <div>
+  return <>
     <div id="gjs" >
     </div>
 
-    <button onClick={() => {
-      localStorage.setItem('gjs-email-editor', editor.runCommand('gjs-get-inlined-html'))
-      const blob = new Blob([editor.runCommand('gjs-get-inlined-html')], { type: "text/html;charset=utf-8" });
-      FileSaver.saveAs(blob, "hello world.html");
-    }}>
-      Click
-    </button>
+    <div className='demo-button'>
 
-    <button onClick={() => {
-      localStorage.setItem('gjs-email-editor', editor.runCommand('gjs-get-inlined-html'))
-    }}>
-      Save
-    </button>
-  </div>
+      <button onClick={() => {
+        localStorage.setItem('gjs-email-editor', editor.runCommand('gjs-get-inlined-html'))
+        const blob = new Blob([editor.runCommand('gjs-get-inlined-html')], { type: "text/html;charset=utf-8" });
+        FileSaver.saveAs(blob, "hello world.html");
+      }}>
+        Download File
+      </button>
+
+      <button onClick={() => {
+        localStorage.setItem('gjs-email-editor', editor.runCommand('gjs-get-inlined-html'))
+      }}>
+        Save LocalStorage
+      </button>
+    </div>
+  </>
 }
 
 export default App
