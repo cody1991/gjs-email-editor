@@ -3,6 +3,7 @@ import 'grapesjs/dist/css/grapes.min.css'
 import grapesJS from 'grapesjs'
 import FileSaver from 'file-saver';
 import plugin from './email-editor';
+import CkeditorPlugin from 'grapesjs-plugin-ckeditor';
 // import plugin, { zh as pluginZh, en as pluginEn } from './mjml-editor';
 import zh from 'grapesjs/locale/zh';
 import en from 'grapesjs/locale/en';
@@ -43,7 +44,7 @@ function App() {
       },
       fromElement: true,
       container: '#gjs',
-      plugins: [plugin],
+      plugins: [plugin, CkeditorPlugin],
       pluginsOpts: {
         [plugin]: {
           // i18n: {
@@ -51,6 +52,24 @@ function App() {
           //   en: { ...pluginEn }
           // }
           updateStyleManager: false
+        },
+        [CkeditorPlugin]: {
+          position: 'center',
+          options: {
+            startupFocus: true,
+            extraAllowedContent: '*(*);*{*}', // Allows any class and any inline style
+            allowedContent: true, // Disable auto-formatting, class removing, etc.
+            enterMode: 2,
+            extraPlugins: 'sharedspace,justify,colorbutton,panelbutton,font',
+            toolbar: [
+              { name: 'styles', items: ['Font', 'FontSize'] },
+              ['Bold', 'Italic', 'Underline', 'Strike'],
+              { name: 'paragraph', items: ['NumberedList', 'BulletedList'] },
+              { name: 'links', items: ['Link', 'Unlink'] },
+              { name: 'colors', items: ['TextColor', 'BGColor'] },
+            ],
+            language: 'zh-cn', // zh-cn对应简体中文，即使浏览器 设置-语言-首选语言是繁体，编辑器也文本也显示简体
+          },
         },
       },
     });
