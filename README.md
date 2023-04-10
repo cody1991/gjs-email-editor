@@ -244,3 +244,35 @@ BUG: Block Highlight Display Bug
 参考：https://github.com/GrapesJS/grapesjs/issues/3063
 
 如果编辑器所在的页面超过一屏，滚动的时候可能会导致参考线错位，我们可以指定 `listenToEl` 属性，那么当指定的元素发生滚动的时候，画布会整体 `resize`，纠正 参考线错位 错位问题
+
+## 自定义上传
+
+这个也是直接看源码知道了使用方法的：https://github.com/GrapesJS/grapesjs/blob/6184b6c86c92af2cc30fe79665351747b346bfa2/src/asset_manager/config/config.ts
+
+```ts
+assetManager: {
+  uploadFile: (param: any) => {
+    const files = param.dataTransfer
+      ? param.dataTransfer.files
+      : param.target.files;
+    const [file] = files;
+    // upload file
+    const cos = new Cosapi({
+      file,
+      onProgress: () => {
+        console.log(1);
+      },
+    });
+    return cos.uploadFile((err: any, res: any) => {
+      if (err) {
+        // handle error
+        return;
+      }
+      if (res) {
+        // res is a url
+        curEditor.AssetManager.add([res]);
+      }
+    });
+  },
+},
+```
